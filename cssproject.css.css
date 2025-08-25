@@ -1,0 +1,1786 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body,html{
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: rgb(246, 249, 190);
+    scrollbar-width: smooth;
+
+    /* opacity: 0; */
+}
+
+
+/* train moving */
+.nav{
+  margin-top: 0;
+    position: fixed;
+    z-index: +1;
+    background-color: linear-gradient(to bottom, #87ceeb, #ffffff);
+
+}
+
+
+
+body {
+      margin-top: 15px;
+      
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+h1{
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    margin-top: 0;
+    text-shadow: #fe0a0a;
+    position: absolute;
+    color: rgb(48, 4, 4);
+}
+h1:hover{
+    color: rgb(48, 4, 4);
+    text-shadow: 2px 2px 1px rgb(255, 243, 183);
+  transform: scale(1.06);
+  transition: 0.8s ease-in-out;
+
+    
+}
+
+#search{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 15px;
+    left: 1050px;
+    box-shadow: 2px 2px 2px 2px black;
+    
+}
+#search:hover{
+  transition: 1.5s ease;
+  transform: scale(1.09);
+  box-shadow: 5px 5px 5px grey;
+
+}
+
+
+video{
+
+  width: 100%;
+  margin-top: 0px;
+  position: relative;
+  top: 0;
+  object-fit: cover;
+  height: 800px;
+  /* pointer-events: visibleStroke; */
+
+}
+
+.heading{
+  position: absolute;
+  top: 200px;
+  left: 120px;
+  font-size: 50px;
+  font-family: "Ribeye Marrow", serif;
+  font-weight: 40;
+  font-style: normal;
+}
+
+
+
+
+img {
+    width: 500px;
+    /* height: 100px; */
+    position: relative;
+    top: 50%;
+
+}
+
+    .train {
+      position: absolute;
+      top: 60px;
+      padding-top: 0;
+      left: -500px;
+      display: flex;
+      animation: moveTrain 10s linear infinite;
+      transform: perspective(1200px) rotateX(6deg);
+    }
+    .car {
+        position: relative;
+      width: 150px;
+      height: 50px;
+      margin-right: 10px;
+      background: rgb(83, 235, 81);
+      border: 1px solid #33eb0a;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px rgb(68, 128, 65);
+      transform: rotateY(10deg);
+      cursor: pointer;
+    }
+    .train .car:hover{
+        background: #367903;
+        color: whitesmoke;
+        transform: scale(1.05);
+    }
+
+    .engine {
+      background: linear-gradient(135deg, #c0392b, #e74c3c);
+    }
+
+    @keyframes moveTrain {
+      0% { left: -800px; }
+      100% { left: 100%; }
+    }
+
+    .title {
+      position: absolute;
+      top: 1000px;
+      left: 90px;
+      font-size: 3em;
+      color: rgb(51, 6, 6);
+    }
+    title h2{
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+
+
+
+    .book-now {
+      top: 300px;
+      left: 20px;
+      padding: 10px 20px;
+      background: #3498db;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 30px 30px 30px 30px;
+    }
+
+    .book-now:hover {
+      background: rgb(51, 6, 6);
+      color: white;
+        transition: 0.9s ease;
+
+      transform: scale(1.1);
+      box-shadow:2px 2px 2px grey;
+
+    }
+
+    
+
+
+
+
+/*heading-2  */
+
+.heading-2{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 80px;
+
+}
+
+.pnr{
+  border: 1px solid grey;
+  width: 500px;
+  height: 100px;
+  font-size: 30px;
+  border-radius: 20px;
+  position: absolute;
+  left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    animation: text-appear both;
+  animation-timeline: view();
+  transform: translateX(-200px);
+  animation-range: entry 20% cover 40%;
+  
+}
+
+.running{
+   border: 1px solid grey;
+  width: 500px;
+  height: 100px;
+  font-size: 30px;
+  border-radius: 20px;
+  position: absolute;
+  left: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: text-appear both;
+  animation-timeline: view();
+  transform: translateX(-200px);
+  animation-range: entry 20% cover 40%;
+
+}
+
+.pnr:hover{
+  background: black;
+  color: white;
+  /* transform: translate Y(100px); */
+  transition: 0.9s ease;
+  transform: scale(1.09);
+  box-shadow: 5px 5px 5px grey;
+
+
+}
+.running:hover{
+  background-color: black;
+  color: white;
+  transition: 0.9s ease;
+  transform: scale(1.09);
+  box-shadow: 5px 5px 5px grey;
+}
+
+/* train-image */
+
+.about_train{
+  position: relative;
+  width: 100%;
+  height: 700px;
+  
+}
+
+
+.train-img1 img{
+  border: 2px solid;
+  border-radius: 0px 60px ;
+  position: absolute;
+  top: 83px;
+  left: 100px;
+  width: 400px;
+  box-shadow: 10px 20px 50px 10px rgb(126, 134, 136);
+  animation: fadeup both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+
+}
+
+.train-img2 img{
+  width: 300px;
+  position: absolute;
+  top: 160px;
+  left: 510px;
+  border: 2px solid;
+  border-radius: 60px 0px;
+  box-shadow: 10px 20px 50px 10px rgb(126, 134, 136);
+    animation: fadeup both;
+  animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+   
+}
+
+.train-img3 img{
+  position: absolute;
+  top: 360px;
+  width: 300px;
+  left: 200px;
+  border: 2px solid;
+  border-radius: 60px 0px;
+  box-shadow: 10px 20px 50px 10px rgb(126, 134, 136);
+  animation: fadeup both;
+  animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+
+}
+
+.train-img4 img{
+  position: absolute;
+  top:360px;
+  left: 510px;
+  width: 400px;
+  border: 2px solid;
+  border-radius: 0px 60px;
+  box-shadow: 10px 20px 50px 10px rgb(126, 134, 136);
+  animation: fadeup both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+
+}
+
+@keyframes fadeup {
+  from {
+    /* opacity: 0; */
+    transform: translateY(10px) scale(0.5);
+    scale: 0.4;
+  }
+  to {
+    /* opacity: 1; */
+    transform: translateY(0) scale(1);
+    scale: 1;
+  }
+}
+
+
+.about-train-content{
+  /* height: 50px; */
+  font-size: 85px;
+  /* border: 2px solid; */
+  position: absolute;
+  top: 200px;
+  left: 900px;
+  font-family: "Aladin", system-ui;
+  letter-spacing: 7px;
+  text-shadow: 7px 5px 5px black;
+  color: rgb(8, 0, 255);
+}
+
+.about-train-content h2{
+  /* color: #242121; */
+  animation: text-appear both;
+  animation-timeline: view();
+  transform: translateX(-200px);
+  animation-range: entry 20% cover 40%;
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transition: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+
+
+
+/* train-image */
+
+
+/* rotate circle */
+
+.auto-rotate-container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 2px 2px 5px 5px;
+  width: 100%;
+  background-color: #bbffa2;
+  border-radius: 100px 100px;
+   animation: text-appear both;
+  animation-timeline: view();
+  transform: translateX(-200px);
+  animation-range: entry 20% cover 40%;
+  
+}
+
+.rotating-circle {
+  width: 450px;
+  height: 450px;
+  box-shadow: 5px 5px 5px 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: rotate360 10s linear infinite;
+  position: absolute;
+  top: 20px;
+  left: 900px;
+  font-family: "Lobster Two", sans-serif;
+
+}
+
+.inner-content{
+  position: absolute;
+  left: 90px;
+  font-family: "Lobster Two", sans-serif;
+  
+  color: blue;
+  text-shadow: 3px 2px 3px black;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+}
+
+.auto-rotate-container h3{
+  font-size: 150px;
+  font-weight: 900px;
+
+}
+.auto-rotate-container h6{
+  font-size: 90px;
+  text-shadow: 1px 2px 2px black;
+
+}
+
+.auto-rotate-container p{
+  font-size: 50px;
+
+}
+
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*rotate circle  */
+
+
+
+
+
+/* gallery */
+.gallery .cards{
+  position: absolute;
+  width: 100%;
+  height: 200vh;
+  border: 2px solid black;
+  /* overflow: hidden; */
+}
+
+search-full-container{
+  position: relative;
+  display: flex;
+  /* display: inline-flex; */
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.search-train{
+  position: absolute;
+  left: 150px;
+  /* border: 1px solid #e5e6e6; */
+  width: 700px;
+  height: 450px;
+  border-radius: 40px 40px;
+  margin-left: 20px;
+  background: #76eb6b;
+  box-shadow: 5px 5px 15px 10px #3cdd2a;
+  font-size: 25px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+#h2{
+  position: relative;
+  left: 160px;
+  color: #096303;
+  margin: 20px;
+  font-size: 30px;
+  /* border: 2px solid palevioletred; */
+}
+
+#from,#To,#dob{
+  font-size: 20px;
+   width: 500px;
+  height: 70px;
+  margin: 10px;
+  border: 2px solid #31b102;
+  box-shadow: 1px 1px 1px 1px rgb(29, 146, 29);
+  border-radius: 10px ;
+}
+.search{
+  font-size: 20px;
+  /* margin: 15px */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(10, 192, 46);
+  color: black;
+  border-radius: 10px;
+    animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
+}
+.search:hover{
+  color: white;
+  background: blue;
+  
+}
+
+
+.search-content{
+  font-family: "Ribeye Marrow", serif;
+  position: absolute;
+  left: 900px;
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 20px;
+  font-size: 30px;
+    animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+
+}
+
+
+
+/* gallery */
+
+
+
+
+/* combination of 3 sectors */
+
+
+.combined{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.jock {
+  display: inline-block;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+  background: #fff;
+  position: relative;
+  vertical-align: top;
+}
+
+.jock .img-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+
+}
+
+.jock img {
+  position: absolute;
+  top: 0;
+  left: 50%;  
+  border-radius: 50%;
+  transform: translateX(-50%);
+  width: 130%;
+  height: 130%;
+  object-fit: cover;
+  transition: all 1s ease-in-out; 
+  /* z-index: 2; */
+  pointer-events: none;
+
+
+} 
+
+.jock .text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 0.45s ease 0.05s;
+  /* z-index: 1; */
+  pointer-events: none;
+}
+
+.jock:hover img,
+.jock:focus-within img {
+  left: 8px;
+  top: 8px;
+  width: 48%;
+  height: 48%;
+  transform: translateX(0);
+  /* z-index: 1; */
+}
+
+.jock:hover .text,
+.jock:focus-within .text {
+  opacity: 1;
+  /* z-index: 3; */
+}
+
+
+
+
+/* combination of 3 sectors */
+
+
+
+/* availabilities */
+
+.availabilities{
+  position: relative;
+  left: 130px;
+  width: 80%;
+  height: 280px;
+  border: 2px solid #51f138;
+  background: #84f584;
+  border-radius: 50px 50px;
+  box-shadow: 2px 2px 2px 5px rgb(40, 122, 30);
+
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+}
+
+.food{
+  position: absolute;
+  top: 120px;
+  left: 65px;
+  border: 1px solid;
+    border-radius: 30px 30px;
+  width: 120px;
+  height: 100px;
+  font-size: 20px;
+  
+
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.4;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+
+.seat{
+  position: absolute;
+  top: 120px;
+  left: 265px;
+  border: 1px solid;
+    border-radius: 30px 30px;
+  width: 120px;
+  height: 100px;
+  font-size: 20px;
+
+}
+.TT{
+  position: absolute;
+  top: 120px;
+  left: 455px;
+  border: 1px solid;
+    border-radius: 30px 30px;
+  width: 120px;
+  height: 100px;
+  font-size: 20px;
+
+}
+.Schedule{
+  position: absolute;
+  top: 120px;
+  left: 645px;
+  border: 1px solid;
+   border-radius: 30px 30px; 
+  width: 120px;
+  height: 100px;
+  font-size: 20px;
+}
+.live{
+  position: absolute;
+  top: 120px;
+  left: 835px; 
+  border: 1px solid;
+    border-radius: 30px 30px;
+  width: 120px;
+  height: 100px;
+  font-size: 20px;
+
+}
+.Charts{
+  position: absolute;
+  top: 120px;
+  left: 1025px; 
+  border: 1px solid;
+  border-radius: 30px 30px;
+  width: 120px;
+  height: 100px;
+  font-size: 20px;
+  /* background-color: #333; */
+
+}
+
+.availabilities h2{
+  color: #000000;
+  font-size: 40px;
+  position: absolute;
+  top: 25px;
+  left: 480px;
+
+
+}
+.food:hover{
+  color: white;
+  background: rgb(52, 43, 43);
+  transition: 0.9s ease;
+  
+}
+
+.seat:hover{
+  color: white;
+  background: rgb(52, 43, 43);
+  transition: 0.9s ease;
+  
+}
+
+.TT:hover{
+  color: white;
+  background: rgb(52, 43, 43);
+  transition: 0.9s ease;
+  
+}
+
+.Schedule:hover{
+  color: white;
+  background: rgb(52, 43, 43);
+  transition: 0.9s ease;
+  
+}
+
+.live:hover{
+  color: white;
+  background: rgb(52, 43, 43);
+  transition: 0.9s ease;
+  
+}
+
+.Charts:hover{
+  color: white;
+  background: rgb(52, 43, 43);
+  transition: 0.9s ease;
+  
+}
+
+
+
+
+/* availabilities */
+
+
+/* all */
+
+
+
+.about_All{
+  position: relative;
+  /* border: 2px solid; */
+  width: 100%;
+  height: auto;
+
+}
+.all-box{
+  position: relative;
+  align-items: center;
+    
+    
+
+}
+
+.all-bus img{
+  border: 2px solid black;
+  width: 300px;
+  position: absolute;
+  top: 160px;
+  right: 800px;
+  border-radius: 70px 70px 0px 70px;
+  box-shadow: 2px 3px 5px 5px rgb(56, 56, 56);
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+
+}
+.all-bus h1{
+  position: absolute;
+  top:230px;
+  left: 250px;
+  font-size: 70px;
+
+}
+
+.all-bus :hover {
+  transition: 0.9s ease;
+  transform: scale(1.09);  
+  
+}
+
+.all-metro img{
+  border: 2px solid black;
+  width: 450px;
+  height: 250px;
+  position: absolute;
+  top: 110px;
+  right: 320px;
+  border-radius: 70px 70px 70px 0px;
+  box-shadow: 2px 3px 5px 5px rgb(56, 56, 56);
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  
+  
+}
+
+.all-metro h1 {
+  position: absolute;
+  top:230px;
+  right: 130px;  
+  font-size: 70px;
+}
+
+.all-metro :hover {
+  transition: 0.9s ease;
+  transform: scale(1.09);  
+  
+}
+
+.all-train img{
+  border: 2px solid black;
+  width: 450px;
+  height: 250px;
+  position: absolute;
+  top: 380px;
+  right: 800px;
+  border-radius: 70px 0px 70px 70px;
+  box-shadow: 2px 3px 5px 5px rgb(56, 56, 56);
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+
+
+}
+.all-train h1 {
+  position: absolute;
+  top:430px;
+  left: 60px;   
+  font-size: 70px;
+}
+
+
+.all-train :hover {
+  transition: 0.9s ease;
+  transform: scale(1.09);  
+  
+}
+
+.all-air img{
+  border: 2px solid black;
+  width: 300px;
+  position: absolute;
+  top: 380px;
+  right: 470px;
+  border-radius: 0px 70px 70px 70px;
+  box-shadow: 2px 3px 5px 5px rgb(56, 56, 56);
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+
+}
+.all-air h1 {
+  position: absolute;
+  top:430px;
+  right: 160px; 
+  font-size: 70px;
+  /* visibility: hidden; */
+}
+
+.all-air :hover {
+  transition: 0.9s ease;
+  transform: scale(1.09);  
+  
+}
+
+
+
+
+
+
+
+/* all */
+
+
+
+
+
+.marquee-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f9f9f9;
+    }
+
+    .marquee-content1 {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 10s linear infinite;
+      font-size: 24px;
+      color: #333;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(50%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+
+
+.container{
+  width: 95%;
+  border: 2px solid #0a8f1a;
+  position: relative;
+  left: 30%;
+  border-radius: 10px 10px;
+  box-shadow: 5px 5px 5px 5px #1e9220;
+  transform: translate(-30%,-30%);
+  overflow: hidden;
+}
+.slide{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide 8s infinite;
+}
+
+
+@keyframes slide{
+  0%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-20);
+
+  }
+  30%{
+    transform: translateX(-30%);
+  }
+  50%{
+    transform: translateX(-60%);
+  }
+  60%{
+    transform: translateX(-70%);
+  }
+  70%{
+    transform: translateX(-80%);
+  }
+  80%{
+    transform: translateX(-100%);
+  } 
+  100%{
+    transform: translateX(-125%);
+  }
+}
+
+.slide img {
+  object-fit: cover;
+  width: 30%px;
+  margin: 3px;
+  border-radius: 20px 20px;
+}
+
+.slide .img1 img {
+  height: 230px;
+  width: 600px;
+}
+
+.slide .img2 img {
+  height: 230px;
+  width: 600px;
+}
+
+
+.why h1{
+  position: relative;
+  top: -170px;
+  font-size: 70px;
+  animation: text-appear both;
+  animation-timeline: view();
+  transform: translateX(-100px);
+  animation-range: entry 20% cover 40%;
+}
+
+
+
+
+
+
+.end img{
+ position: relative;
+ left: 22%;
+ width: 850px;
+
+ animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.footer {
+  width: auto;
+  position: relative;
+}
+
+.footer img{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  /* background: #000000; */
+}
+.footer h3{
+  font-size: 30px;
+  position: absolute;
+  left: 550px;
+  top: 40px;
+  color: white;
+}
+
+.footer p{
+  position: absolute;
+  left: 450px;
+  top: 90px;
+  color: white;
+
+}
+.inside-footer {
+  position: relative;
+  color: white;
+  width: 65%;
+  height: 170px;
+  border: 1px solid white;
+  position: absolute;
+  top: 160px;
+  left: 250px;
+  box-shadow:1px 2px 4px 3px #7ec7f9;
+}
+
+.inside-footer h5 {
+  font-size: 20px;
+  position: absolute;
+  top: 55px;
+  left: 60px;
+  
+}
+
+.inside-footer h4 {
+  font-size: 30px;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+}
+
+.inside-footer .company {
+  width: 100px;
+  height: 100px;
+  /* border: 1px solid white; */
+  position: absolute;
+  top: 30px;
+  left: 200px;
+}
+
+.inside-footer .company span {
+  color: #e74c3c;
+  font-size: 10px;
+
+
+}
+
+
+.inside-footer .company h6 {
+  font-size: 15px;
+}
+
+
+
+
+
+.inside-footer .company1 {
+  width: 100px;
+  height: 100px;
+  /* border: 1px solid white; */
+  position: absolute;
+  top: 30px;
+  left: 400px;
+} 
+
+.inside-footer .company1 span {
+  color: #e74c3c;
+  font-size: 10px;
+
+
+}
+
+
+.inside-footer .company1 h6 {
+  font-size: 15px;
+}
+
+
+
+.inside-footer .company2 {
+  width: 200px;
+  height: 50px;
+  /* border: 1px solid white; */
+  position: absolute;
+  top: 85px;
+  left: 630px;
+} 
+
+
+.inside-footer .company2 h5 {
+  top: 10px;
+}
+
+.inside-footer .company2 .span {
+  top: 20px;
+}
+
+.inside-footer img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  border-radius: 50% 50%;
+}
+
+
+.footer .created {
+  width: 500px;
+  position: absolute;
+  left: 580px;
+  top: 360px;
+  color: rgb(135, 246, 84);
+}
+
+
+
+
+
+
+
+/* MEDIA TAGS */
+
+/* -------------------- Laptop (1025px–1440px) -------------------- */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  h1 {
+    font-size: 44px;
+  }
+
+  #search {
+    width: 360px;
+    right: 24px;
+  }
+
+  video {
+    height: 70vh;
+  }
+
+  .heading {
+    top: 160px;
+    left: 80px;
+    font-size: 42px;
+  }
+
+  .train {
+    top: 56px;
+  }
+
+  .car {
+    width: 130px;
+    height: 46px;
+    font-size: 20px;
+    margin-right: 8px;
+  }
+
+  .search-train {
+    left: 80px;
+    width: 720px;
+  }
+
+  .about-train-content {
+    left: 820px;
+    font-size: 72px;
+  }
+
+  .slide .img1 img,
+  .slide .img2 img {
+    height: 220px;
+  }
+}
+
+/* -------------------- Tablet (601px–1024px) -------------------- */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 38px;
+    left: 16px !important;
+    position: absolute;
+  }
+
+  #search {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 45vw;
+    height: 38px;
+  }
+
+  .train {
+    left: 0 !important;
+
+    right: 0;
+    top: 56px;
+    padding: 8px 12px;
+    animation: none !important;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .car {
+    min-width: 120px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  video {
+    height: 60vh;
+  }
+
+  .heading {
+    top: 140px;
+    left: 48px;
+    font-size: 36px;
+  }
+
+  .book-now {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .search-full-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 24px;
+  }
+
+  .search-train {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  #from,
+  #To,
+  #dob {
+    width: calc(100% - 40px);
+    height: 56px;
+    font-size: 18px;
+  }
+
+  .search-content {
+    position: relative;
+    width: 100%;
+    font-size: 22px;
+    padding: 12px 0 24px;
+  }
+
+  .about_train {
+    height: auto;
+    padding: 24px;
+  }
+
+  .train-img1 img,
+  .train-img2 img,
+  .train-img3 img,
+  .train-img4 img {
+    position: static !important;
+    width: 100% !important;
+    max-width: 520px;
+    margin: 12px auto;
+    display: block;
+  }
+
+  .about-train-content {
+    position: static;
+    font-size: 48px;
+    text-align: center;
+    margin: 16px 0 8px;
+  }
+
+  .rotating-circle {
+    position: static;
+    width: 70vw;
+    height: 70vw;
+    max-width: 520px;
+    max-height: 520px;
+    margin: 0 auto 16px;
+  }
+
+  .inner-content {
+    position: static;
+    text-align: center;
+  }
+
+  .auto-rotate-container h3 {
+    font-size: 72px;
+  }
+
+  .auto-rotate-container h6 {
+    font-size: 36px;
+  }
+
+  .auto-rotate-container p {
+    font-size: 20px;
+  }
+
+  .combined {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .jock {
+    width: 300px;
+    height: 300px;
+  }
+
+  .availabilities {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    padding: 24px 12px 16px;
+    height: auto;
+  }
+
+  .availabilities h2 {
+    position: static;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .food,
+  .seat,
+  .TT,
+  .Schedule,
+  .live,
+  .Charts {
+    position: static;
+    display: inline-flex;
+    width: calc(33.33% - 12px);
+    height: 96px;
+    margin: 6px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about_All .all-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 0 16px 24px;
+  }
+
+  .all-bus img,
+  .all-metro img,
+  .all-train img,
+  .all-air img {
+    position: static !important;
+    width: 100% !important;
+    border-radius: 24px;
+  }
+
+  .all-bus h1,
+  .all-metro h1,
+  .all-train h1,
+  .all-air h1 {
+    position: static !important;
+    font-size: 40px;
+    margin: 8px 0 16px;
+    text-align: center;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+
+  .slide .img1 img,
+  .slide .img2 img {
+    width: 480px;
+    height: 200px;
+  }
+
+  .why h1 {
+    top: 0;
+    font-size: 48px;
+    text-align: center;
+    margin: 24px 8px;
+  }
+
+  .end img {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  .footer h3,
+  .footer p,
+  .inside-footer,
+  .footer .created {
+    position: static !important;
+    width: auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .footer h3 {
+    text-align: center;
+    margin: 16px 0 8px;
+  }
+
+  .footer p {
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .inside-footer {
+    width: calc(100% - 32px);
+    margin: 16px auto;
+    font-size: 1px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .footer .created {
+    text-align: center;
+    margin: 12px auto 24px;
+  }
+}
+
+/* -------------------- Mobile (≤600px) -------------------- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+    left: 12px !important;
+    position: absolute;
+  }
+
+  #search {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 52vw;
+    height: 34px;
+  }
+
+  .train {
+    top: 52px;
+    left: 0 !important;
+    right: 0;
+    padding: 8px;
+    animation: none !important;
+    overflow-x: auto;
+    gap: 8px;
+  }
+
+  .car {
+    min-width: 110px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  video {
+    height: 45vh;
+  }
+
+  .heading {
+    top: 110px;
+    left: 16px;
+    font-size: 26px;
+  }
+
+  .book-now {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  .search-full-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .search-train {
+    position: relative;
+    left: 70px;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+  }
+
+  #from,
+  #To,
+  #dob {
+    width: calc(100% - 28px);
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .search {
+    height: 50px;
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .search-content {
+    /* position: relative; */
+    /* display: hidden; */
+    /* border: 1px solid black; */
+    width: 100%;
+    font-size: 18px;
+    position: absolute;
+    top: 1150px;
+    left: 70px;
+  }
+
+  .heading-2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .pnr,
+  .running {
+    position: static;
+    width: calc(100% - 24px);
+    height: 76px;
+    font-size: 20px;
+  }
+
+  .about_train {
+    height: auto;
+    padding: 12px;
+  }
+
+  .train-img1 img,
+  .train-img2 img,
+  .train-img3 img,
+  .train-img4 img {
+    position: static !important;
+    width: 100% !important;
+    margin: 8px 0;
+  }
+
+  .about-train-content {
+    position: static;
+    font-size: 34px;
+    text-align: center;
+    margin: 8px 0 0;
+  }
+
+  .rotating-circle {
+    position: static;
+    width: 78vw;
+    height: 78vw;
+    margin: 0 auto 12px;
+  }
+
+  .inner-content {
+    position: static;
+    text-align: center;
+  }
+
+  .auto-rotate-container h3 {
+    font-size: 44px;
+  }
+
+  .auto-rotate-container h6 {
+    font-size: 26px;
+  }
+
+  .auto-rotate-container p {
+    font-size: 16px;
+  }
+
+  .combined {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .jock {
+    width: 100%;
+    height: 280px;
+    border-radius: 24px;
+  }
+
+  .availabilities {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+    height: auto;
+    padding: 16px 8px;
+  }
+
+  .availabilities h2 {
+    position: static;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 28px;
+  }
+
+  .food,
+  .seat,
+  .TT,
+  .Schedule,
+  .live,
+  .Charts {
+    position: static;
+    display: inline-flex;
+    width: calc(50% - 10px);
+    height: 84px;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .about_All .all-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 12px 16px;
+  }
+
+  .all-bus img,
+  .all-metro img,
+  .all-train img,
+  .all-air img {
+    position: static !important;
+    width: 100% !important;
+    border-radius: 20px;
+  }
+
+  .all-bus h1,
+  .all-metro h1,
+  .all-train h1,
+  .all-air h1 {
+    position: static !important;
+    font-size: 32px;
+    margin: 6px 0 12px;
+    text-align: center;
+  }
+
+  .container {
+    width: calc(100% - 24px);
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+
+  .slide .img1 img,
+  .slide .img2 img {
+    width: 320px;
+    height: 160px;
+  }
+
+  .why h1 {
+    top: 0;
+    font-size: 34px;
+    text-align: center;
+    margin: 16px 8px;
+  }
+
+  .end img {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+  }
+
+  .footer h3,
+  .footer p,
+  .inside-footer,
+  .footer .created {
+    position: static !important;
+    width: auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .footer h3 {
+    text-align: center;
+    margin: 12px 0 6px;
+    font-size: 22px;
+  }
+
+  .footer p {
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    padding: 0 8px;
+    font-size: 14px;
+  }
+
+  .inside-footer {
+    width: 100px;
+    border: red;
+    margin: 12px auto;
+    height: auto;
+    padding: 12px;
+    position: absolute;
+    top: 500px;
+    font-size: 3px;
+  }
+
+  .footer .created {
+    text-align: center;
+    margin: 8px auto 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
